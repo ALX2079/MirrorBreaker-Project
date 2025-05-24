@@ -41,13 +41,13 @@ Once logged in, go to the Domain List and click on manage the domain name:
 
 In the manage menu, edit both records and enter the IP address from the Elastic IP that we saved from earlier, then keep the TTL (orange box) as automatic/30 mins, which works fine, but I like using 60 mins. Depending on the tim you put in, is the time you want to wait before proceeding. 
 ![image](https://github.com/user-attachments/assets/91cb0ca8-01d1-466c-89b6-fda3198e96e1)
-
-
+<br/><br/>  <br/><br/>  
  
 ## Setting up a web server:
 ### Basic Linux setup
-AWS
-AWS
+Boot up your Linux instance if it's not up already and bring up the terminal.
+<br/><br/>  
+
 ### Install/run Apache:
 AWS
 AWS
