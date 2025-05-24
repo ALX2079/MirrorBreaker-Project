@@ -13,30 +13,30 @@ AWS
 AWS
 
 
-### Domain Name:
+## Domain Name:
 AWS
 AWS
 
  
-### Setting up a web server:
-## Basic Linux setup
+## Setting up a web server:
+### Basic Linux setup
 AWS
 AWS
-## Install/run Apache:
+### Install/run Apache:
 AWS
 AWS
-## Install/run Certbot:
+### Install/run Certbot:
 AWS
 AWS
 
  
-### WordPress:
+## WordPress:
 AWS
 AWS
-## Install/run WordPress:
+### Install/run WordPress:
 AWS
 AWS
-## Import Template:
+### Import Template:
 AWS
 AWS
 
