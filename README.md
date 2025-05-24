@@ -3,7 +3,7 @@ Alesssandro Alvarenga Sasso | 35573786
 
 
 ## Setting up AWS:
-AWS
+First go to AWS at https://aws.amazon.com/
 AWS
 ### Setting up a Ubuntu Linux instance:
 AWS
