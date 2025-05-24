@@ -25,7 +25,7 @@ Otherwise, make a new RSA keypair and hold onto it, and create a new security gr
 
 <br/><br/>
 Once the instance is created, allocate an elastic IP that'll act as a static IP for use with the domain name later on.
-![image](https://github.com/user-attachments/assets/8c1bc34b-f482-4b41-a0bc-15df3646a23e)  
+![image](https://github.com/user-attachments/assets/17f90614-29bc-41d9-817e-e92902783458)  
 <br/><br/>
 Test
 
