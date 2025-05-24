@@ -20,19 +20,14 @@ Enter a name, the specifics aren't too important, and then select the Ubuntu ope
 
 <br/><br/>
 If using the preexisting account, select the preexisting key pair and security group "launch-wizard-1".  
-Otherwise, make a new RSA keypair and hold onto it, and create a new security group with both HTTP (80) and HTTPS (443) ports open:
+Otherwise, make a new RSA keypair and hold onto it, and create a new security group with both HTTP (80) and HTTPS (443) ports open, also increase the storage to about 25 to remain under the free limit:
 ![image](https://github.com/user-attachments/assets/da1ee96a-5d13-494f-adf7-6d20de2b6e07)    
 
 <br/><br/>
-
-
-
-### Setting up a Ubuntu Linux instance:
-AWS
-AWS
-### Allocating an Elastic IP:
-AWS
-AWS
+Once the instance is created, allocate an elastic IP that'll act as a static IP for use with the domain name later on.
+![image](https://github.com/user-attachments/assets/8c1bc34b-f482-4b41-a0bc-15df3646a23e)  
+<br/><br/>
+Test
 
 
 ## Domain Name:
