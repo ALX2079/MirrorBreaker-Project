@@ -68,16 +68,116 @@ Run the following commands:
 ```
 1. sudo snap install --classic certbot
 2. sudo ln -s /snap/bin/certbot /usr/bin/certbot
-3. sudo certbot --apache  
-(certbot, 2025)
+3. sudo certbot --apache
 ```
- 
+> (certbot, 2025)
+
+
 ## WordPress:
-AWS
-AWS
-### Install/run WordPress:
-AWS
-AWS
+### Install/run WordPress:  
+1. Copy and paste the below into the terminal and run it to install the dependencies required for WordPress:  
+```
+sudo apt install ghostscript \
+                 libapache2-mod-php \
+                 mysql-server \
+                 php \
+                 php-bcmath \
+                 php-curl \
+                 php-imagick \
+                 php-intl \
+                 php-json \
+                 php-mbstring \
+                 php-mysql \
+                 php-xml \
+                 php-zip
+```  
+
+<br/>
+2. The installation of WordPress itself:  
+
+```
+sudo mkdir -p /srv/www
+sudo chown www-data: /srv/www
+curl https://wordpress.org/latest.tar.gz | sudo -u www-data tar zx -C /srv/www
+```
+
+<br/>
+3. Configuring Apache:  
+
+Create a config file: `sudo touch /etc/apache2/sites-available/wordpress.conf` <br/>Edit file: `sudo nano /etc/apache2/sites-available/wordpress.`  
+
+Copy and paste the following into the file opened with the previous 'nano' statement: <br/>
+```
+<VirtualHost *:80>
+    DocumentRoot /srv/www/wordpress
+    <Directory /srv/www/wordpress>
+        Options FollowSymLinks
+        AllowOverride Limit Options FileInfo
+        DirectoryIndex index.php
+        Require all granted
+    </Directory>
+    <Directory /srv/www/wordpress/wp-content>
+        Options FollowSymLinks
+        Require all granted
+    </Directory>
+</VirtualHost>
+```
+<br/>
+Run: 
+
+```
+sudo a2ensite wordpress
+sudo a2enmod rewrite
+sudo a2dissite 000-default
+sudo service apache2 reload
+```
+
+<br/>
+4. Database configuration:  
+
+Run: `sudo mysql -u root`
+
+Once running mysql:  
+
+Run: `CREATE DATABASE wordpress;` and, make sure to replace <password> `CREATE USER wordpress@localhost IDENTIFIED BY '<password>';`
+
+> [!WARNING]
+> Instructions for the below. Copy and paste each line one at a time, after pasting the first line Shift+Enter to move onto the next line before pasting or you will run the line before you're done putting it together.
+
+```
+GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,ALTER
+    -> ON wordpress.*
+    -> TO wordpress@localhost;
+```
+
+Run: `FLUSH PRIVILEGES;` and `quit` and `sudo service mysql start` and with that done, the database is operational.   <br/>
+
+5. Configure WordPress to connect to the database:  
+
+Run: `sudo -u www-data cp /srv/www/wordpress/wp-config-sample.php /srv/www/wordpress/wp-config.php`
+
+Replace <password> below with the same password created earlier:  
+```
+sudo -u www-data sed -i 's/database_name_here/wordpress/' /srv/www/wordpress/wp-config.php
+sudo -u www-data sed -i 's/username_here/wordpress/' /srv/www/wordpress/wp-config.php
+sudo -u www-data sed -i 's/password_here/<password>/' /srv/www/wordpress/wp-config.php
+```
+
+Go to: https://api.wordpress.org/secret-key/1.1/salt/ and save the contents of the page, then find:
+```
+define( 'AUTH_KEY',         'put your unique phrase here' );
+define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );
+define( 'LOGGED_IN_KEY',    'put your unique phrase here' );
+define( 'NONCE_KEY',        'put your unique phrase here' );
+define( 'AUTH_SALT',        'put your unique phrase here' );
+define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
+define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
+define( 'NONCE_SALT',       'put your unique phrase here' );
+```
+and replace it using nano: `sudo -u www-data nano /srv/www/wordpress/wp-config.php` with the contents you saved from the webpage earlier.  </br>
+
+6. Setting up WordPress:
+
 ### Import Template:
 AWS
 AWS
