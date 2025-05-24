@@ -19,16 +19,18 @@ Enter a name, the specifics aren't too important, and then select the Ubuntu ope
 ![image](https://github.com/user-attachments/assets/516a5a0c-93e7-43a9-9d09-fb465d021d80)    
 
 <br/><br/>
-If using the preexisting account, select the preexisting key pair and security group "launch-wizard-1".  
-Otherwise, make a new RSA keypair and hold onto it, and create a new security group with both HTTP (80) and HTTPS (443) ports open, also increase the storage to about 25 to remain under the free limit:
+If using the preexisting account, select the preexisting key pair and security group "launch-wizard-1". Otherwise, make a new RSA keypair and hold onto it, and create a new security group with both HTTP (80) and HTTPS (443) ports open, also increase the storage to about 25 to remain under the free limit:
 ![image](https://github.com/user-attachments/assets/da1ee96a-5d13-494f-adf7-6d20de2b6e07)    
 
 <br/><br/>
 Once the instance is created, allocate an elastic IP that'll act as a static IP for use with the domain name later on.
 ![image](https://github.com/user-attachments/assets/17f90614-29bc-41d9-817e-e92902783458)  
-<br/><br/>
-Test
 
+<br/><br/>
+The next step is to select the IP address (or click on Allocate Elastic IP address to create one beforehand) and then select the associate option from the Actions menu. Also, record the IP address for later use (inside the orange box):
+![image](https://github.com/user-attachments/assets/9b5aa2e0-562c-45ec-97c0-8fa12aa87e01)
+
+This is the end of setting up the AWS server.
 
 ## Domain Name:
 AWS
