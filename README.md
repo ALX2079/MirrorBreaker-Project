@@ -1,10 +1,12 @@
 # ICT171 Cloud Project
 Alesssandro Alvarenga Sasso | 35573786
+![image](https://github.com/user-attachments/assets/dfe22857-3b4f-4fb0-be1d-0dfe13301f62)
 
 
 ## Setting up AWS:
-First go to AWS at https://aws.amazon.com/  
-AWS  
+First go to AWS at https://aws.amazon.com/ and log in
+
+
 ### Setting up a Ubuntu Linux instance:
 AWS
 AWS
