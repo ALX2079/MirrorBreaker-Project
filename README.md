@@ -1,7 +1,6 @@
 # ICT171 Cloud Project
 Alessandro Alvarenga Sasso | 35573786
 
-
 ## Setting up AWS:
 First, go to AWS at https://aws.amazon.com/ and log in
 ![image](https://github.com/user-attachments/assets/dfe22857-3b4f-4fb0-be1d-0dfe13301f62)  
@@ -50,18 +49,26 @@ In the manage menu, edit both records and enter the IP address from the Elastic 
 ### Basic (SSH) Linux setup
 Boot up your Linux instance if it's not up already and bring up the terminal.
 
+> [!NOTE]
+> If you are using SSH from the same Linux machine to the same IP address/Domain name but using a new AWS instance, you'll get a warning and be told to run a command like `ssh-keygen -f '<KeyAddress>/.ssh/known_hosts' -R '<IPaddress/Domain Name'`. The terminal will provide a full version of it that you will just need to copy and paste.
+
 1. Use the ssh command `ssh -i <address/file> ubuntu@<IPaddress>`, replacing the "address/file" with the location of the key pair on the Linux machine and replacing the "IPaddress" with the Elastic IP address or the domain name. Both options work.  
 2. Run `sudo apt update`.  
 
 And now the Linux installation is ready for use.  
 
 ### Install/run Apache:
-AWS
-AWS
-### Install/run Certbot:
-AWS
-AWS
+Run `sudo apt install apache2` and Apache is all set up.
 
+### Install/run Certbot (SSL certificate):
+Time to get HTTPS available for the webpage. <br/><br/>
+Run the following commands:  
+```
+1. sudo snap install --classic certbot
+2. sudo ln -s /snap/bin/certbot /usr/bin/certbot
+3. sudo certbot --apache  
+(certbot, 2025)
+```
  
 ## WordPress:
 AWS
@@ -75,5 +82,9 @@ AWS
 
 ## Script
 
+
+
+## Reference List:
+certbot. (2025). certbot instructions. Electronic Frontier Foundation. Retrieved 24/05/2025 from https://certbot.eff.org/instructions?ws=apache&os=snap
 
 
