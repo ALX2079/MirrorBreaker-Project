@@ -56,9 +56,11 @@ Boot up your Linux instance if it's not up already and bring up the terminal.
 2. Run `sudo apt update`.  
 
 And now the Linux installation is ready for use.  
+<br/><br/>
 
 ### Install/run Apache:
 Run `sudo apt install apache2` and Apache is all set up.
+<br/><br/>
 
 ### Install/run Certbot (SSL certificate):
 Time to get HTTPS available for the webpage. <br/><br/>
