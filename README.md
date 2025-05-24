@@ -31,10 +31,17 @@ The next step is to select the IP address (or click on Allocate Elastic IP addre
 ![image](https://github.com/user-attachments/assets/9b5aa2e0-562c-45ec-97c0-8fa12aa87e01)
 
 This is the end of setting up the AWS server.
+<br/><br/>  
 
 ## Domain Name:
-AWS
-AWS
+The next steps take place on https://www.namecheap.com/ after logging in (these steps are only required if the Elastic IP address changed):  
+Once logged in, go to the Domain List and click on manage the domain name:
+![image](https://github.com/user-attachments/assets/a2910103-2e55-4120-8835-1e364ed80d42)
+<br/><br/>  
+
+In the manage menu, edit both records and enter the IP address from the Elastic IP that we saved from earlier, then keep the TTL (orange box) as automatic/30 mins, which works fine, but I like using 60 mins. Depending on the tim you put in, is the time you want to wait before proceeding. 
+![image](https://github.com/user-attachments/assets/91cb0ca8-01d1-466c-89b6-fda3198e96e1)
+
 
  
 ## Setting up a web server:
