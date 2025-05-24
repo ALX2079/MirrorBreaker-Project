@@ -92,7 +92,7 @@ sudo apt install ghostscript \
                  php-zip
 ```  
 
-<br/>
+<br/></br>
 2. The installation of WordPress itself:  
 
 ```
@@ -101,7 +101,7 @@ sudo chown www-data: /srv/www
 curl https://wordpress.org/latest.tar.gz | sudo -u www-data tar zx -C /srv/www
 ```
 
-<br/>
+<br/></br>
 3. Configuring Apache:  
 
 Create a config file: `sudo touch /etc/apache2/sites-available/wordpress.conf` <br/>Edit file: `sudo nano /etc/apache2/sites-available/wordpress.`  
@@ -132,7 +132,7 @@ sudo a2dissite 000-default
 sudo service apache2 reload
 ```
 
-<br/>
+<br/></br>
 4. Database configuration:  
 
 Run: `sudo mysql -u root`
@@ -150,7 +150,7 @@ GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,ALTER
     -> TO wordpress@localhost;
 ```
 
-Run: `FLUSH PRIVILEGES;` and `quit` and `sudo service mysql start` and with that done, the database is operational.   <br/>
+Run: `FLUSH PRIVILEGES;` and `quit` and `sudo service mysql start` and with that done, the database is operational.   <br/></br>
 
 5. Configure WordPress to connect to the database:  
 
@@ -174,7 +174,7 @@ define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
 define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
 define( 'NONCE_SALT',       'put your unique phrase here' );
 ```
-and replace it using nano: `sudo -u www-data nano /srv/www/wordpress/wp-config.php` with the contents you saved from the webpage earlier.  </br>
+and replace it using nano: `sudo -u www-data nano /srv/www/wordpress/wp-config.php` with the contents you saved from the webpage earlier.  </br></br>
 
 6. Setting up WordPress:
 
