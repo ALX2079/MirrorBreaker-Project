@@ -20,6 +20,9 @@ Enter a name, the specifics aren't too important, and then select the Ubuntu ope
 
 <br/><br/>
 If using the preexisting account, select the preexisting key pair and security group "launch-wizard-1". Otherwise, make a new RSA keypair and hold onto it, and create a new security group with both HTTP (80) and HTTPS (443) ports open, also increase the storage to about 25 to remain under the free limit:
+> [!CAUTION]
+> DO NOT LOSE THE KEY PAIR, or you will have to restart the entire process and take down the server.
+
 ![image](https://github.com/user-attachments/assets/da1ee96a-5d13-494f-adf7-6d20de2b6e07)    
 
 <br/><br/>
@@ -39,14 +42,18 @@ Once logged in, go to the Domain List and click on manage the domain name:
 ![image](https://github.com/user-attachments/assets/a2910103-2e55-4120-8835-1e364ed80d42)
 <br/><br/>  
 
-In the manage menu, edit both records and enter the IP address from the Elastic IP that we saved from earlier, then keep the TTL (orange box) as automatic/30 mins, which works fine, but I like using 60 mins. Depending on the tim you put in, is the time you want to wait before proceeding. 
+In the manage menu, edit both records and enter the IP address from the Elastic IP that we saved from earlier, then keep the TTL (orange box) as automatic/30 mins, which works fine, but I like using 60 mins. Depending on the time you put in, is the time you want to wait before proceeding. 
 ![image](https://github.com/user-attachments/assets/91cb0ca8-01d1-466c-89b6-fda3198e96e1)
 <br/><br/>  <br/><br/>  
  
-## Setting up a web server:
-### Basic Linux setup
+## Setting up a web server:  
+### Basic (SSH) Linux setup
 Boot up your Linux instance if it's not up already and bring up the terminal.
-<br/><br/>  
+
+1. Use the ssh command `ssh -i <address/file> ubuntu@<IPaddress>`, replacing the "address/file" with the location of the key pair on the Linux machine and replacing the "IPaddress" with the Elastic IP address or the domain name. Both options work.  
+2. Run `sudo apt update`.  
+
+And now the Linux installation is ready for use.  
 
 ### Install/run Apache:
 AWS
@@ -66,7 +73,7 @@ AWS
 AWS
 AWS
 
-### Script
+## Script
 
 
 
