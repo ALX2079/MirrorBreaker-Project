@@ -23,18 +23,30 @@ If using the preexisting account, select the preexisting key pair and security g
 > DO NOT LOSE THE KEY PAIR, or you will have to restart the entire process and take down the server.
 
 (How to set up new key pair/security rules as mentioned above)
-![image](https://github.com/user-attachments/assets/6b743bdf-156e-4437-a810-5c917341f941)
+![image](https://github.com/user-attachments/assets/6b743bdf-156e-4437-a810-5c917341f941) 
 ![image](https://github.com/user-attachments/assets/a0fd06ee-df19-418d-9cc1-64aad4f29f88)
 (How to use pre-existing ones)
 ![image](https://github.com/user-attachments/assets/da1ee96a-5d13-494f-adf7-6d20de2b6e07)    
 
 <br/><br/>
-Once the instance is created, allocate an elastic IP that'll act as a static IP for use with the domain name later on.
+Once the instance is created, go to the Elastic IP menu to allocate an Elastic IP that'll act as a static IP for use with the domain name later on.
 ![image](https://github.com/user-attachments/assets/17f90614-29bc-41d9-817e-e92902783458)  
 
 <br/><br/>
-The next step is to select the IP address (or click on Allocate Elastic IP address to create one beforehand) and then select the associate option from the Actions menu. Also, record the IP address for later use (inside the orange box):
+Once in the menu, click on the orange Allocate IP address button:
+![image](https://github.com/user-attachments/assets/b73ecfc7-f7a3-4233-a504-3dfa77fdc836)
+
+<br/><br/>
+Now click on the orange button again, as all the settings should be fine by default (you may want to double-check that the region is the same region as your server):
+![image](https://github.com/user-attachments/assets/0f29dfcd-d63a-4953-b26c-6cd304ff3a7a)
+
+<br/><br/>
+The next step is to select the IP address and then select the associate option from the Actions menu. Also, record the IP address for later use (inside the orange box):
 ![image](https://github.com/user-attachments/assets/9b5aa2e0-562c-45ec-97c0-8fa12aa87e01)
+
+Once in the associate menu, click on every field, and the instance you just created should show up in the drop-down box, which you can click on, and then click on Allow Reallocation and then the orange Associate button:
+![image](https://github.com/user-attachments/assets/9a18d2dd-f63a-47eb-8d8e-834d29942419)
+
 
 This is the end of setting up the AWS server.
 <br/><br/>  
