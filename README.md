@@ -18,10 +18,14 @@ Enter a name, the specifics aren't too important, and then select the Ubuntu ope
 ![image](https://github.com/user-attachments/assets/516a5a0c-93e7-43a9-9d09-fb465d021d80)    
 
 <br/><br/>
-If using the preexisting account, select the preexisting key pair and security group "launch-wizard-1". Otherwise, make a new RSA keypair and hold onto it, and create a new security group with both HTTP (80) and HTTPS (443) ports open, also increase the storage to about 25 to remain under the free limit:
+If using the preexisting account, select the preexisting key pair and security group "launch-wizard-1". Otherwise, make a new RSA keypair and hold onto it, and create a new security group with both HTTP (80) and HTTPS (443) ports open, also increase the storage to 30 if you want to use all of the free storage available in the AWS free trial (I like going a bit under just in case:
 > [!CAUTION]
 > DO NOT LOSE THE KEY PAIR, or you will have to restart the entire process and take down the server.
 
+(How to set up new key pair/security rules as mentioned above)
+![image](https://github.com/user-attachments/assets/6b743bdf-156e-4437-a810-5c917341f941)
+![image](https://github.com/user-attachments/assets/a0fd06ee-df19-418d-9cc1-64aad4f29f88)
+(How to use pre-existing ones)
 ![image](https://github.com/user-attachments/assets/da1ee96a-5d13-494f-adf7-6d20de2b6e07)    
 
 <br/><br/>
