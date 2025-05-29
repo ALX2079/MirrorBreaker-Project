@@ -90,7 +90,8 @@ sudo apt install ghostscript \
                  php-mysql \
                  php-xml \
                  php-zip
-```  
+```
+> (Mikołajczyk & Llewellyn, 2025)
 
 <br/></br>
 2. The installation of WordPress itself:  
@@ -100,6 +101,7 @@ sudo mkdir -p /srv/www
 sudo chown www-data: /srv/www
 curl https://wordpress.org/latest.tar.gz | sudo -u www-data tar zx -C /srv/www
 ```
+> (Mikołajczyk & Llewellyn, 2025)
 
 <br/></br>
 3. Configuring Apache:  
@@ -131,6 +133,7 @@ sudo a2enmod rewrite
 sudo a2dissite 000-default
 sudo service apache2 reload
 ```
+> (Mikołajczyk & Llewellyn, 2025)
 
 <br/></br>
 4. Database configuration:  
@@ -149,6 +152,7 @@ GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,ALTER
     -> ON wordpress.*
     -> TO wordpress@localhost;
 ```
+> (Mikołajczyk & Llewellyn, 2025)
 
 Run: `FLUSH PRIVILEGES;` and `quit` and `sudo service mysql start` and with that done, the database is operational.   <br/></br>
 
@@ -175,6 +179,7 @@ define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
 define( 'NONCE_SALT',       'put your unique phrase here' );
 ```
 and replace it using nano: `sudo -u www-data nano /srv/www/wordpress/wp-config.php` with the contents you saved from the webpage earlier.  </br></br>
+> (Mikołajczyk & Llewellyn, 2025)
 
 6. Setting up WordPress:
 
@@ -188,5 +193,6 @@ AWS
 
 ## Reference List:
 certbot. (2025). certbot instructions. Electronic Frontier Foundation. Retrieved 24/05/2025 from https://certbot.eff.org/instructions?ws=apache&os=snap
+Mikołajczyk, N., & Llewellyn, L. (2025). Install and configure WordPress. Canonical Ltd. Retrieved 24/05/2025 from https://ubuntu.com/tutorials/install-and-configure-wordpress
 
 
