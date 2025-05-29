@@ -122,7 +122,7 @@ curl https://wordpress.org/latest.tar.gz | sudo -u www-data tar zx -C /srv/www
 <br/></br>
 3. Configuring Apache:  
 
-Create a config file: `sudo touch /etc/apache2/sites-available/wordpress.conf` <br/>Edit file: `sudo nano /etc/apache2/sites-available/wordpress.`  
+Create a config file: `sudo touch /etc/apache2/sites-available/wordpress.conf` <br/>Edit file: `sudo nano /etc/apache2/sites-available/wordpress.conf`  
 
 Copy and paste the following into the file opened with the previous 'nano' statement: <br/>
 ```
