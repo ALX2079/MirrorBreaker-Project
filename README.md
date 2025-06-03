@@ -74,26 +74,12 @@ Boot up your Linux instance if it's not up already and bring up the terminal.
 And now the Linux installation is ready for use.  
 <br/><br/>
 
-### Install/run Apache:
-Run `sudo apt install apache2` and Apache is all set up.
-<br/><br/>
-
-### Install/run Certbot (SSL certificate):
-Time to get HTTPS available for the webpage. <br/><br/>
-Run the following commands:  
-```
-1. sudo snap install --classic certbot
-2. sudo ln -s /snap/bin/certbot /usr/bin/certbot
-3. sudo certbot --apache
-```
-> (certbot, 2025)
-
-
 ## WordPress:
 ### Install/run WordPress:  
 1. Copy and paste the below into the terminal and run it to install the dependencies required for WordPress:  
 ```
-sudo apt install ghostscript \
+sudo apt install apache2 \
+                 ghostscript \
                  libapache2-mod-php \
                  mysql-server \
                  php \
@@ -196,19 +182,38 @@ define( 'NONCE_SALT',       'put your unique phrase here' );
 ```
 and replace it using nano: `sudo -u www-data nano /srv/www/wordpress/wp-config.php` with the contents you saved from the webpage earlier.  </br></br>
 > (Mikołajczyk & Llewellyn, 2025)
+<br/><br/>
 
-6. Setting up WordPress:
+### Install/run Certbot (SSL certificate):
+Time to get HTTPS available for the webpage. <br/><br/>
+Run the following commands:  
+```
+1. sudo snap install --classic certbot
+2. sudo ln -s /snap/bin/certbot /usr/bin/certbot
+3. sudo certbot --apache
+```
+> (certbot, 2025)
+<br/><br/>
 
-### Import Template:
-AWS
-AWS
+6. Setting up WordPress:  
 
-## Script
+Enter the Domain Name that you've linked to the web server, and you'll be redirected to the WordPress admin page, and you'll need to enter your preferred language. If you scroll down a bit, you'll find English (Australia):
+![image](https://github.com/user-attachments/assets/f6a4cf21-69f5-40bd-a3a9-7cfef99d4bc5)  
+<br/><br/>
 
+Now you'll need to enter key details such as the website name and the admin login details:
+![image](https://github.com/user-attachments/assets/2d0efcd7-1c27-477b-bea4-0c941356ae94)  
+<br/><br/>
+
+And now the setup is completed, and you can access the WordPress admin page and build the website:
+![image](https://github.com/user-attachments/assets/29d5b235-28d2-4f97-9619-81db804e8016)
+![image](https://github.com/user-attachments/assets/4f0f8e4a-f55c-4d39-b57b-eacbea02f212)
+![image](https://github.com/user-attachments/assets/c5bd09fe-4e18-4fca-a4cd-9a995261757d)  
+<br/><br/>
 
 
 ## Reference List:
-certbot. (2025). certbot instructions. Electronic Frontier Foundation. Retrieved 24/05/2025 from https://certbot.eff.org/instructions?ws=apache&os=snap
+certbot. (2025). certbot instructions. Electronic Frontier Foundation. Retrieved 24/05/2025 from https://certbot.eff.org/instructions?ws=apache&os=snap  
 Mikołajczyk, N., & Llewellyn, L. (2025). Install and configure WordPress. Canonical Ltd. Retrieved 24/05/2025 from https://ubuntu.com/tutorials/install-and-configure-wordpress
 
 
