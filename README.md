@@ -1,5 +1,8 @@
 # ICT171 Cloud Project
-Alessandro Alvarenga Sasso | 35573786
+Alessandro Alvarenga Sasso | 35573786  
+IP address: 3.104.44.127 | Domain Name: https://www.mirrorbreaker.it.com  
+Video Explainer: https://youtu.be/HTkuOrccxvo  
+
 
 ## Setting up AWS:
 First, go to AWS at https://aws.amazon.com/ and log in
